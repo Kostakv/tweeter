@@ -1,0 +1,19 @@
+header {
+          height: 400px;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          background-color: #7d8ca3;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Alignerimg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

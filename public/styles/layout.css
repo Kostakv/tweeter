@@ -16,9 +16,22 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  font-family: "Source Sans Pro";
   font-size: 24px;
+  background-color: #0BEAC5;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  
 }
+
+.container{
+    padding-left: 6em;
+    padding-right: 6em;
+}
+
+
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
