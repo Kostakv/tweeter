@@ -1,13 +1,16 @@
 nav {
-      height: 120px !important;
-      width: 100% !important;
-      background-color: #2F242C !important;
-      color: white !important;
-      padding-left: 1.5em !important;
-      padding-right: 1.5em !important;
-      padding-bottom: 1em !important;
-      padding-top: 1em !important;
-      bottom: 0 !important;
+      height: 120px ;
+      background-color: #2F242C ;
+      color: white ;
+      padding-left: 1.5em ;
+      padding-right: 1.5em ;
+      padding-bottom: 1em ;
+      padding-top: 1em ;
+      background-color: #333;
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+       width: 100%; /* Full width */
+
 
 }
 
