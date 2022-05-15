@@ -1,15 +1,18 @@
 header {
-          height: 400px;
+          height: 320px;
           width: 100%;
           justify-content: center;
           align-items: center;
           background-color: #7d8ca3;
+          
 }
 
 .Aligner {
   display: flex;
+  padding-bottom: 20px;
   align-items: center;
   justify-content: center;
+  
 }
 
 .Alignerimg{
