@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('Testing the dom')
   $('#tweet-text').keyup(function() {
     const textVal = $(this).val()
     const textLength = textVal.length

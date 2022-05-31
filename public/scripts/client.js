@@ -1,11 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-
-
 
 $(document).ready(()=> {
   const loadTweets = function(){
@@ -18,18 +10,22 @@ $(document).ready(()=> {
 
   $( "#tweetSub" ).submit(function( event ) {
     event.preventDefault();
-
-    const $text = $(this).serialize();
-    if ($text.length > 140 || $text === ""){
-      alert('Enter tweet less than 140 characters');
-    } else {
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: $text
-    })
-  
     
+    const $text = $(this).serialize()
+    let formLength = $(this).find("textarea").val().length;
+
+    if (formLength > 140){
+      alert('Enter tweet less than 140 characters');
+    } 
+    else if (formLength <= 0){
+      alert('Please enter a valid tweet');
+    } else {
+      $.post( "/tweets", $text ).then(() => {
+        $('.tweet-section').empty();
+        loadTweets()
+      }
+      )
+
   }
     
   });
@@ -38,7 +34,7 @@ $(document).ready(()=> {
     const section = $('.tweet-section')
     for (const i of tweets) {
       const tweetElememt = createTweetElement(i)
-      section.append(tweetElememt);
+      section.prepend(tweetElememt);
     }
   
   // calls createTweetElement for each tweet
@@ -52,7 +48,7 @@ $(document).ready(()=> {
       <i>${tweet.user.name}</i>
       <i>${tweet.user.handle}</i>
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
       <i>${tweet.created_at}</i>
         <div id ="icons">
@@ -63,5 +59,12 @@ $(document).ready(()=> {
   
   return $tweet;
   }
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
 
 })
