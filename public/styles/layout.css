@@ -45,7 +45,7 @@ body {
  @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-    justify-content: center;
+
     flex-direction: right;
     color: #545149;
     font-family: "Source Sans Pro";

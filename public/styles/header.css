@@ -1,5 +1,5 @@
-header {
-          height: 320px;
+.logo {
+          height: 400px;
           width: 100%;
           justify-content: center;
           align-items: center;
@@ -22,7 +22,9 @@ header {
 }
 
 @media only screen and (min-width: 1024px) {
-  header {
+  .logo {
+    margin-left: 50px;
+    margin-top: 50px;
     width: 33.3%
   }
 }
