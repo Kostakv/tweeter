@@ -15,11 +15,15 @@ $(document).ready(()=> {
     let formLength = $(this).find("textarea").val().length;
 
     if (formLength > 140){
-      alert('Enter tweet less than 140 characters');
+      $("h4").css("display", "none");
+      $("h3").css("display", "block");
     } 
     else if (formLength <= 0){
-      alert('Please enter a valid tweet');
+      $("h4").css("display", "block");
+      $("h3").css("display", "none");
     } else {
+      $("h4").css("display", "none");
+      $("h3").css("display", "none");
       $.post( "/tweets", $text ).then(() => {
         $('.tweet-section').empty();
         loadTweets()

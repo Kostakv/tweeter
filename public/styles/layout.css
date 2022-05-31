@@ -41,3 +41,20 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+    flex-direction: right;
+    color: #545149;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    background-color: #0BEAC5;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    margin-top: 120px;
+    width: 100%;
+    
+  }
+ }
+ 

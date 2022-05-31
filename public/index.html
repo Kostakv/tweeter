@@ -52,7 +52,8 @@
     <main class="container">
       <section class="new-tweet">
         <h2 style = "text-align: center;">Compose Tweet</h2>
-
+        <h3 id ='longError'>Error: Please make sure the tweet is less than 140 characters!</h3>
+        <h4 id ='longError'>Error: Please enter a valid tweet!</h3>
         <form id ='tweetSub' method="POST" action="/tweets/">
           <label for="tweet-text"><strong>What are you humming about?</strong></label>
           <textarea name="text" id="tweet-text"></textarea>

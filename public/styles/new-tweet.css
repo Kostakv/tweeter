@@ -84,7 +84,16 @@
        color: rgb(255, 115, 0);
 }
 
-
+h3 {   
+        display: none;
+        border: 2px solid red;
+        text-align: center;
+}
+h4 {    
+        display: none;
+        border: 2px solid red;
+        text-align: center;
+}
 
 
 
